@@ -176,7 +176,7 @@ elif page == "About Me":
     st.markdown("""
     **Hi, I'm Salsa!**  
     
-    I'm a first year student at President University and passionate about data science machine learning,and interactive web applications. This project shows how machine learning can be applied to diabetes prediction.
+    I'm a first year student at President University and passionate about data science, machine learning,and interactive web applications. This project shows how machine learning can be applied to diabetes prediction.
     
     **Technologies Used:**  
     - Python, Pandas, NumPy  
