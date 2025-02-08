@@ -3,11 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-import base64
-import os
-import io
 import time
-from PIL import Image
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
@@ -157,16 +153,23 @@ elif page == "About Me":
         unsafe_allow_html=True
     )
 
-    image_url = "https://github.com/SalsabilaLubis21/MyPersonalDiabetesPredictor/blob/main/linkedin%20photo.jpg?raw=true"
+    import time  
+    timestamp = int(time.time())  # Menghindari cache dengan timestamp
 
+    # Deklarasikan image_url SEBELUM digunakan
+    image_url = f"https://github.com/SalsabilaLubis21/MyPersonalDiabetesPredictor/blob/main/linkedin%20photo.jpg?raw=true&t={timestamp}"
 
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         time.sleep(0.5)  
-        st.markdown(f'<img src="{image_url}" class="animated-image" width="450">', unsafe_allow_html=True)
 
+        # Buat container kosong
+        img_container = st.empty()
+        
+        # Pastikan image_url sudah dideklarasikan sebelum digunakan di sini
+        img_container.markdown(f'<img src="{image_url}" class="animated-image" width="450">', unsafe_allow_html=True)
 
-        st.markdown("<br><br><br>", unsafe_allow_html=True)
+    st.markdown("<br><br><br>", unsafe_allow_html=True)
 
     st.title("About Me")
     st.markdown("""
