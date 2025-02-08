@@ -86,7 +86,7 @@ elif page == "Data Analysis":
     sns.heatmap(df.corr(), annot=True, cmap="coolwarm", fmt=".2f", ax=ax)
     st.pyplot(fig)
     st.subheader("Dataset Preview")
-    st.dataframe(df.head(10))
+    st.table(df.head(10))
     st.markdown("### Summary Statistics")
     st.write(df.describe())
 
