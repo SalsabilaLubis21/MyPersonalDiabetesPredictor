@@ -157,18 +157,14 @@ elif page == "About Me":
         unsafe_allow_html=True
     )
 
-    def image_to_base64(image):
-        buffered = io.BytesIO()
-        image.save(buffered, format="PNG")
-        return base64.b64encode(buffered.getvalue()).decode()
+    image_url = "https://github.com/SalsabilaLubis21/MyPersonalDiabetesPredictor/blob/main/linkedin%20photo.jpg?raw=true"
 
-    image = Image.open("C:\\Python\\linkedin photo.jpg")
-    image_base64 = image_to_base64(image)
 
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         time.sleep(0.5)  
-        st.markdown(f'<img src="data:image/png;base64,{image_base64}" class="animated-image" width="450">', unsafe_allow_html=True)
+        st.markdown(f'<img src="{image_url}" class="animated-image" width="450">', unsafe_allow_html=True)
+
 
         st.markdown("<br><br><br>", unsafe_allow_html=True)
 
