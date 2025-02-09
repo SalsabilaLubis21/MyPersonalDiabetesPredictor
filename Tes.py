@@ -154,19 +154,19 @@ elif page == "About Me":
     )
 
     import time  
-    timestamp = int(time.time())  # Menghindari cache dengan timestamp
+    timestamp = int(time.time())  
 
-    # Deklarasikan image_url SEBELUM digunakan
+    
     image_url = f"https://github.com/SalsabilaLubis21/MyPersonalDiabetesPredictor/blob/main/linkedin%20photo.jpg?raw=true&t={timestamp}"
 
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         time.sleep(0.5)  
 
-        # Buat container kosong
+       
         img_container = st.empty()
         
-        # Pastikan image_url sudah dideklarasikan sebelum digunakan di sini
+        
         img_container.markdown(f'<img src="{image_url}" class="animated-image" width="450">', unsafe_allow_html=True)
 
     st.markdown("<br><br><br>", unsafe_allow_html=True)
